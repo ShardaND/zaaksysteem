@@ -1,0 +1,121 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "This is a sample calculator app whcih supports addition,substraction,division and multiplication",
+    "version": "1.0.0",
+    "title": "Calculator"
+  },
+  "host": "localhost:6543",
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "calculator",
+      "description": "Calculator"
+    }
+  ],
+  "schemes": [
+    "https",
+    "http"
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": [
+          "calculator"
+        ],
+        "summary": "Calculator",
+        "operationId": "home",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/calculator": {
+      "get": {
+        "tags": [
+          "calculator"
+        ],
+        "summary": "Calculator",
+        "operationId": "Calculator",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    },
+    "/calculator/add": {
+      "get": {
+        "tags": [
+          "calculator"
+        ],
+        "summary": "Addition operation",
+        "operationId": "Addition",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "operand1",
+            "in": "query",
+            "description": "First operand",
+            "required": true,
+            "type": "integer"
+          },
+          {
+            "name": "operand2",
+            "in": "query",
+            "description": "Second operand",
+            "required": true,
+            "type": "integer"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
+    }
+  }
+}
