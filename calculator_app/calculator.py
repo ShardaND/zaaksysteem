@@ -18,14 +18,13 @@ class Calculator:
 
     def evaluate(a):
         """
-        Additon operation
+        Evaluation operation
 
         Keyword arguments:
                 a -- the first operand
-                b -- the second operand
 
         Returns:
-                a+b
+                result of expression evaluation 
         """
         c = SimpleCalculator()
         c.run(a)
