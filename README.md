@@ -27,14 +27,14 @@ Before you begin with setup, ensure the following is installed to your system:
 - Run the below command on your terminal to clone the github repositoty on your local machine:
 
 ```
-git clone https://github.com/ShardaND/zaaksysteem-assignment.git
+git clone https://github.com/ShardaND/zaaksysteem.git
 ```
 - Start your Docker instance 
 
-- Move (cd) to the project directory "zaaksystem-assignment" in terminal
+- Move (cd) to the project directory "zaaksystem" in terminal
 
 ```
-cd zaaksysteem-assignment
+cd zaaksysteem
 ```
 - Execute command docker-compose build
 
