@@ -116,6 +116,48 @@
           }
         }
       }
+    },
+    "/calculator/evaluate": {
+      "get": {
+        "tags": [
+          "calculator"
+        ],
+        "summary": "Evaluation operation",
+        "operationId": "Evaluation",
+        "consumes": [
+          "application/json",
+          "application/xml"
+        ],
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "parameters": [
+          {
+            "name": "operand1",
+            "in": "query",
+            "description": "First operand",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "object",
+              "properties": {
+                "result": {
+                  "type": "number"
+                }
+              }
+            }
+          },
+          "405": {
+            "description": "Invalid input"
+          }
+        }
+      }
     }
   }
 }

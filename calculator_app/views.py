@@ -21,3 +21,13 @@ def add(request):
         raise exception_response(
             400, explanation="Operand1 and operand2 are required to perform operation")
     return {"result": Calculator.add(a, b)}
+
+@view_config(request_method='GET', route_name='evaluate', renderer='json')
+def add(request):
+    """Adds the parameter operands and returns the result"""
+    a = request.params['operand1']
+    # if one of the operand is missing raise 400 error
+    if(not(a) ):
+        raise exception_response(
+            400, explanation="Operand1 and operand2 are required to perform operation")
+    return {"result": Calculator.evaluate(a)}

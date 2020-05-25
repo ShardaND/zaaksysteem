@@ -20,3 +20,5 @@ waitress==1.4.3
 WebOb==1.8.5
 zope.deprecation==4.4.0
 zope.interface==4.6.0
+simplecalculator==0.0.4
+calculator
